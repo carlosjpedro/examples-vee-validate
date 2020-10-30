@@ -10,7 +10,9 @@
     <label for="password">Password :</label>
     <v-field as="input" type="password" id="password" name="password" />
     <p>{{ errors.password }}</p>
+    <button type="button" @click="showAlert">Alert</button>
     <button>Submit</button>
+    
   </v-form>
 </template>
 
@@ -33,6 +35,9 @@ export default defineComponent({
       });
     };
 
+    const showAlert = () => {
+      alert("Test 123!");
+    };
     ///define form schema
     const formSchema = {
       username: (value: string) => {
@@ -49,7 +54,7 @@ export default defineComponent({
       },
     };
 
-    return { onSubmit, formSchema, username, password };
+    return { onSubmit, formSchema, showAlert, username, password };
   },
 });
 </script>
