@@ -6,7 +6,7 @@
       type="text"
       id="username"
       name="username"
-      rules="required|min_len_10"
+      rules="required"
     />
     <p>{{ errors.username }}</p>
     <label for="password">Password :</label>
@@ -15,7 +15,7 @@
       type="password"
       id="password"
       name="password"
-      rules="required"
+      rules="required|min_len_10"
     />
     <p>{{ errors.password }}</p>
     <label for="age">Age: </label>
@@ -24,7 +24,7 @@
       type="number"
       id="age"
       name="age"
-      rules="min_value:16"
+      rules="min_value:16|max_value:50"
     />
     <p>{{ errors.age }}</p>
     <button>Submit</button>

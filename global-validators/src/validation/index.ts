@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { defineRule } from "vee-validate";
-import { min_value } from '@vee-validate/rules'
+import { min_value, max_value } from '@vee-validate/rules'
 
 defineRule('required', (value: string) =>
     !value ? false : !!value.length);
@@ -14,4 +14,6 @@ defineRule('min_len_10', (value: string) => {
     return true;
 });
 
+//using pre-defined rules.
 defineRule('min_value', min_value);
+defineRule('max_value', max_value);
